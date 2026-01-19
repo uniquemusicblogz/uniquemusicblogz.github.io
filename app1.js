@@ -1,6 +1,20 @@
 // --- Data Definitions ---
 const contentData = [
     {
+        id: 116,
+        type: 'song',
+        title: 'Jucy Yung - Vibes Only (Brand New)',
+        slug: 'jucy-yung-vibes-only-brand-new',
+        artist: 'Jucy Yung',
+        category: 'DOWNLOADS',
+        date: 'Jan 19, 2026',
+        excerpt: 'The freshest track from Jucy Yung, bringing pure positive energy and soulful melodies for the new year.',
+        imageUrl: 'https://picsum.photos/seed/vibesonly/600/300', 
+        downloadLink: '#', 
+        audioUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3', 
+        artistBio: 'Jucy Yung continues to dominate the charts with "Vibes Only," a testament to her evolving sound and dedication to her fans.'
+    },
+    {
         id: 101,
         type: 'song',
         title: 'Jucy Yung - Someday (MP3 Download)',
@@ -292,41 +306,18 @@ const Favorites = {
     }
 };
 
-// --- Disqus Helper ---
-function loadDisqus(pageIdentifier, pageUrl, pageTitle) {
-    // Reset the div
-    const container = document.getElementById('disqus_thread');
-    if (!container) return;
-    container.innerHTML = ''; 
-
-    // If Disqus is already loaded, just reset it
-    if (window.DISQUS) {
-        window.DISQUS.reset({
-            reload: true,
-            config: function () {
-                this.page.identifier = pageIdentifier;
-                this.page.url = pageUrl;
-                this.page.title = pageTitle;
-            }
-        });
-    } else {
-        // Initial Load
-        window.disqus_config = function () {
-            this.page.url = pageUrl; 
-            this.page.identifier = pageIdentifier; 
-            this.page.title = pageTitle;
-        };
-        (function() { 
-            var d = document, s = d.createElement('script');
-            // Updated with your specific Disqus shortname
-            s.src = 'https://https-uniquemusicblogz-github-io.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-        })();
-    }
+// --- Helper Functions ---
+function isNewRelease(dateStr) {
+    if (!dateStr) return false;
+    const releaseDate = new Date(dateStr);
+    const today = new Date();
+    // If release date is in the future (for scheduling), also show as NEW
+    if (releaseDate > today) return true;
+    const diffTime = Math.abs(today - releaseDate);
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    return diffDays <= 14;
 }
 
-// --- Helper Functions ---
 function generateSocialShareButtons(title) {
     const url = encodeURIComponent(window.location.href);
     const text = encodeURIComponent(title);
@@ -445,21 +436,25 @@ function renderGrid(items, containerId) {
         return;
     }
 
-    container.innerHTML = items.map(item => `
-        <div class="content-card bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-700 relative" onclick="navigateTo('${item.type}s/${item.slug}')">
-            <img src="${item.imageUrl}" class="w-full h-48 object-cover">
-            <div class="p-5">
-                <div class="flex justify-between items-start">
-                    <span class="text-red-500 text-xs font-bold uppercase tracking-wider">${item.category}</span>
-                    <button onclick="event.stopPropagation(); toggleFavorite(${item.id}, true)" class="text-xl ${Favorites.has(item.id) ? 'text-red-500' : 'text-gray-500'}">
-                        <i class="${Favorites.has(item.id) ? 'fas' : 'far'} fa-heart"></i>
-                    </button>
+    container.innerHTML = items.map(item => {
+        const isNew = isNewRelease(item.date);
+        return `
+            <div class="content-card bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-700 relative" onclick="navigateTo('${item.type}s/${item.slug}')">
+                ${isNew ? '<div class="new-badge">NEW</div>' : ''}
+                <img src="${item.imageUrl}" class="w-full h-48 object-cover">
+                <div class="p-5">
+                    <div class="flex justify-between items-start">
+                        <span class="text-red-500 text-xs font-bold uppercase tracking-wider">${item.category}</span>
+                        <button onclick="event.stopPropagation(); toggleFavorite(${item.id}, true)" class="text-xl ${Favorites.has(item.id) ? 'text-red-500' : 'text-gray-500'}">
+                            <i class="${Favorites.has(item.id) ? 'fas' : 'far'} fa-heart"></i>
+                        </button>
+                    </div>
+                    <h3 class="text-xl font-bold mt-2 mb-2 line-clamp-1">${item.title}</h3>
+                    <p class="text-gray-400 text-sm line-clamp-2">${item.excerpt}</p>
                 </div>
-                <h3 class="text-xl font-bold mt-2 mb-2 line-clamp-1">${item.title}</h3>
-                <p class="text-gray-400 text-sm line-clamp-2">${item.excerpt}</p>
             </div>
-        </div>
-    `).join('');
+        `;
+    }).join('');
 }
 
 // --- Detail View Rendering ---
@@ -500,22 +495,9 @@ function renderDetail(item) {
                     <p class="text-gray-300 leading-relaxed text-lg">${item.artistBio}</p>
                 </div>
 
-                <!-- Disqus Comments Section -->
-                <div class="mt-12 pt-10 border-t border-gray-700">
-                    <h3 class="text-2xl font-bold mb-6">Comments</h3>
-                    <div id="disqus_thread" class="bg-gray-800 p-6 rounded-xl border border-gray-700 shadow-lg min-h-[200px]"></div>
-                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                </div>
-
                 ${socialButtons}
             </div>
         `;
-        
-        // Initialize/Reload Disqus
-        // We use the item.slug as the unique identifier
-        setTimeout(() => {
-            loadDisqus(item.slug, `https://uniquemusicblogz.github.io/#/downloads/${item.slug}`, item.title);
-        }, 100);
 
     } else if (item.type === 'video') {
         content = `

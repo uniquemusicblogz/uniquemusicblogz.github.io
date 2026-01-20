@@ -413,6 +413,10 @@ function routeToPath() {
         const query = decodeURIComponent(path.split('/')[1]);
         searchBar.value = query;
         performSearch(query);
+    } else if (path.startsWith('artists/')) {
+        const artistName = decodeURIComponent(path.split('/')[1]);
+        renderArtistProfile(artistName);
+        showView('artist-view');
     } else {
         const parts = path.split('/').filter(p => p);
         if (parts.length >= 2) {
@@ -424,6 +428,36 @@ function routeToPath() {
             }
         }
     }
+}
+
+// --- Artist Profile Rendering ---
+function renderArtistProfile(artistName) {
+    const artistItems = contentData.filter(item => item.artist === artistName);
+    
+    if (artistItems.length === 0) {
+        document.getElementById('artist-profile-header').innerHTML = '<p>Artist not found.</p>';
+        return;
+    }
+
+    // Get bio and image from the first item found (or default)
+    const bio = artistItems[0].artistBio || "No biography available.";
+    const image = artistItems[0].imageUrl;
+
+    const headerHTML = `
+        <img src="${image}" class="w-32 h-32 md:w-48 md:h-48 rounded-full object-cover border-4 border-gray-700 shadow-2xl">
+        <div class="text-center md:text-left">
+            <h1 class="text-4xl font-black mb-4">${artistName}</h1>
+            <p class="text-gray-300 leading-relaxed max-w-2xl">${bio}</p>
+            <div class="mt-6 flex flex-wrap gap-4 justify-center md:justify-start">
+                 <button onclick="playSong(${artistItems[0].id})" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-6 rounded-full transition-colors">
+                    <i class="fas fa-play mr-2"></i> Play Latest
+                 </button>
+            </div>
+        </div>
+    `;
+
+    document.getElementById('artist-profile-header').innerHTML = headerHTML;
+    renderGrid(artistItems, 'artist-content-grid');
 }
 
 // --- Grid Rendering ---
@@ -449,8 +483,11 @@ function renderGrid(items, containerId) {
                             <i class="${Favorites.has(item.id) ? 'fas' : 'far'} fa-heart"></i>
                         </button>
                     </div>
-                    <h3 class="text-xl font-bold mt-2 mb-2 line-clamp-1">${item.title}</h3>
-                    <p class="text-gray-400 text-sm line-clamp-2">${item.excerpt}</p>
+                    <h3 class="text-xl font-bold mt-2 mb-2 line-clamp-1 hover:text-red-500 transition-colors">${item.title}</h3>
+                    <p class="text-gray-400 text-sm mb-3">
+                        By <span onclick="event.stopPropagation(); navigateTo('artists/${encodeURIComponent(item.artist)}')" class="text-gray-300 hover:text-red-400 hover:underline transition-colors font-medium">${item.artist}</span>
+                    </p>
+                    <p class="text-gray-500 text-xs line-clamp-2">${item.excerpt}</p>
                 </div>
             </div>
         `;

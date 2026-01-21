@@ -21,7 +21,7 @@ const contentData = [
         slug: 'jucy-yung-someday-mp3-download',
         artists: ['Jucy Yung'],
         category: 'DOWNLOADS',
-        date: 'Nov 15, 2022',
+        date: 'Nov 15, 2025',
         excerpt: 'A soulful, melancholic track capturing the raw ache of heartbreak and the desperate wish to turn back time.',
         imageUrl: 'https://picsum.photos/seed/snoopjay1/600/300', 
         downloadLink: 'https://od.lk/d/NTBfMzQ2OTY4OTJf/Jucy%20Yung%20-%20Someday.mp3', 
@@ -67,11 +67,11 @@ const contentData = [
         slug: 'Lyrics-someday-Jucy-yung',
         artists: ['Jucy Yung'],
         category: 'VIDEOS',
-        date: 'Nov 15, 2022',
-        excerpt: 'A soulful, melancholic track capturing the raw ache of heartbreak and the desperate wish to turn back time.',
+        date: 'Nov 10, 2025',
+        excerpt: 'A Catchy song.',
         imageUrl: 'https://picsum.photos/seed/visualizer/600/300', 
         videoUrl: 'https://www.youtube.com/embed/O_5Nixm0dIU',
-        content: '<p>Released on September 8, 2023, "Someday" showcases Jucy young’s signature sentimental style. The track blends soulful, emotive vocals with a poignant narrative focused on the lingering pain of a breakup, the struggle of loneliness, and the deep-seated longing to return to a relationship’s happiest moments. </p>',
+        content: '<p>Astra\'s new remix of "Neon City" demands a visual experience, and this 4K visualizer delivers.</p>',
     },
     {
         id: 4,
@@ -497,7 +497,7 @@ function renderGrid(items, containerId) {
                     </div>
                     <h3 class="text-xl font-bold mt-2 mb-2 line-clamp-1 hover:text-red-500 transition-colors">${item.title}</h3>
                     <p class="text-gray-400 text-sm mb-3">
-                        ${item.artists ? `By ${item.artists.map(artist => `<span onclick="event.stopPropagation(); navigateTo('artists/${encodeURIComponent(artist)}')" class="text-gray-300 hover:text-red-400 hover:underline transition-colors font-medium">${artist}</span>`).join(', ')}` : ''}
+                        ${item.artists ? `By ${item.artists.map(artist => `<span onclick="event.stopPropagation(); navigateTo('artists/' + encodeURIComponent(artist))" class="text-gray-300 hover:text-red-400 hover:underline transition-colors font-medium">${artist}</span>`).join(', ')}` : ''}
                     </p>
                     <p class="text-gray-500 text-xs line-clamp-2">${item.excerpt}</p>
                 </div>
@@ -545,6 +545,34 @@ function renderDetail(item) {
                 </div>
 
                 ${socialButtons}
+                
+                <div class="mt-12 pt-8 border-t border-gray-700">
+                    <h2 class="text-3xl font-bold mb-6">Related Songs</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        ${contentData.filter(related => 
+                            related.id !== item.id && 
+                            related.artists && item.artists && 
+                            related.artists.some(artist => item.artists.includes(artist))
+                        ).map(related => {
+                            const isNew = isNewRelease(related.date);
+                            return `
+                                <div class="content-card bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-700 relative" onclick="navigateTo('${related.type}s/${related.slug}')">
+                                    ${isNew ? '<div class="new-badge">NEW</div>' : ''}
+                                    <img src="${related.imageUrl}" class="w-full h-48 object-cover">
+                                    <div class="p-5">
+                                        <div class="flex justify-between items-start">
+                                            <span class="text-red-500 text-xs font-bold uppercase tracking-wider">${related.category}</span>
+                                        </div>
+                                        <h3 class="text-xl font-bold mt-2 mb-2 line-clamp-1 hover:text-red-500 transition-colors">${related.title}</h3>
+                                        <p class="text-gray-400 text-sm mb-3">
+                                            ${related.artists ? `By ${related.artists.map(artist => `<span onclick="event.stopPropagation(); navigateTo('artists/' + encodeURIComponent(artist))" class="text-gray-300 hover:text-red-400 hover:underline transition-colors font-medium">${artist}</span>`).join(', ')}` : ''}
+                                        </p>
+                                    </div>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                </div>
             </div>
         `;
 

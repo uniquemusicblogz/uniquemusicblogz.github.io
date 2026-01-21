@@ -5,7 +5,7 @@ const contentData = [
         type: 'song',
         title: 'Jucy Yung - Vibes Only (Brand New)',
         slug: 'jucy-yung-vibes-only-brand-new',
-        artist: 'Jucy Yung',
+        artists: ['Jucy Yung'],
         category: 'DOWNLOADS',
         date: 'Jan 19, 2026',
         excerpt: 'The freshest track from Jucy Yung, bringing pure positive energy and soulful melodies for the new year.',
@@ -19,9 +19,9 @@ const contentData = [
         type: 'song',
         title: 'Jucy Yung - Someday (MP3 Download)',
         slug: 'jucy-yung-someday-mp3-download',
-        artist: 'Jucy Yung',
+        artists: ['Jucy Yung'],
         category: 'DOWNLOADS',
-        date: 'Nov 15, 2025',
+        date: 'Nov 15, 2022',
         excerpt: 'A soulful, melancholic track capturing the raw ache of heartbreak and the desperate wish to turn back time.',
         imageUrl: 'https://picsum.photos/seed/snoopjay1/600/300', 
         downloadLink: 'https://od.lk/d/NTBfMzQ2OTY4OTJf/Jucy%20Yung%20-%20Someday.mp3', 
@@ -33,7 +33,7 @@ const contentData = [
         type: 'song',
         title: 'Phyzo the Producer - Final Selection Cypher 2022',
         slug: 'phyzo-the-producer-final-selection-cypher-2022-mp3-download',
-        artist: 'Phyzo The Producer',
+        artists: ['Phyzo The Producer'],
         category: 'DOWNLOADS',
         date: 'Nov 12, 2022',
         excerpt: 'A fresh new instrumental track perfect for late-night cruising.',
@@ -47,6 +47,7 @@ const contentData = [
         type: 'album', 
         title: 'Florence + The Machine - "Celestial Ground" (Full Album)',
         slug: 'album-florence-and-the-machine-celestial-ground',
+        artists: ['Florence + The Machine'],
         category: 'ALBUMS', 
         date: 'Nov 12, 2025',
         excerpt: 'Florence Welch returns with a sprawling, ambitious, and deeply personal album.',
@@ -64,19 +65,21 @@ const contentData = [
         type: 'video',
         title: 'Lyrics: Someday by Jucy Yung',
         slug: 'Lyrics-someday-Jucy-yung',
+        artists: ['Jucy Yung'],
         category: 'VIDEOS',
-        date: 'Nov 10, 2025',
-        excerpt: 'A Catchy song.',
+        date: 'Nov 15, 2022',
+        excerpt: 'A soulful, melancholic track capturing the raw ache of heartbreak and the desperate wish to turn back time.',
         imageUrl: 'https://picsum.photos/seed/visualizer/600/300', 
         videoUrl: 'https://www.youtube.com/embed/O_5Nixm0dIU',
-        content: '<p>Astra\'s new remix of "Neon City" demands a visual experience, and this 4K visualizer delivers.</p>',
+        content: '<p>Released on September 8, 2023, "Someday" showcases Jucy young’s signature sentimental style. The track blends soulful, emotive vocals with a poignant narrative focused on the lingering pain of a breakup, the struggle of loneliness, and the deep-seated longing to return to a relationship’s happiest moments.'
+    </p>',
     },
     {
         id: 4,
         type: 'song',
-        title: 'Jucy Yung - Dreams',
+        title: 'Jucy Yung - Dreams (feat. Slapdee)',
         slug: 'jucy-yung-dreams',
-        artist: 'Jucy Yung',
+        artists: ['Jucy Yung', 'Slapdee'],
         category: 'DOWNLOADS',
         date: 'Oct 25, 2025',
         excerpt: 'A soulful track about chasing your dreams in a big city.',
@@ -90,6 +93,7 @@ const contentData = [
         type: 'album',
         title: 'Vibe Masters - "Night Owl" (EP)',
         slug: 'vibe-masters-night-owl-ep',
+        artists: ['Vibe Masters'],
         category: 'ALBUMS',
         date: 'Sep 15, 2025',
         excerpt: 'The perfect companion for late-night study sessions or chill evenings.',
@@ -107,7 +111,7 @@ const contentData = [
         type: 'song',
         title: 'King Blaze - Zambian Nights',
         slug: 'king-blaze-zambian-nights',
-        artist: 'King Blaze',
+        artists: ['King Blaze'],
         category: 'DOWNLOADS',
         date: 'Dec 01, 2025',
         excerpt: 'Experience the rhythm of the night with this energetic Zambian hit.',
@@ -121,7 +125,7 @@ const contentData = [
         type: 'song',
         title: 'Melody Queen - Soul Serenade',
         slug: 'melody-queen-soul-serenade',
-        artist: 'Melody Queen',
+        artists: ['Melody Queen'],
         category: 'DOWNLOADS',
         date: 'Dec 05, 2025',
         excerpt: 'A beautiful vocal masterpiece that touches the heart.',
@@ -135,7 +139,7 @@ const contentData = [
         type: 'song',
         title: 'Afro Beat King - Dance Floor',
         slug: 'afro-beat-king-dance-floor',
-        artist: 'Afro Beat King',
+        artists: ['Afro Beat King'],
         category: 'DOWNLOADS',
         date: 'Dec 10, 2025',
         excerpt: 'The ultimate party anthem for every dance floor.',
@@ -149,7 +153,7 @@ const contentData = [
         type: 'song',
         title: 'Yo Maps - Nga Pano',
         slug: 'yo-maps-nga-pano',
-        artist: 'Yo Maps',
+        artists: ['Yo Maps'],
         category: 'DOWNLOADS',
         date: 'Dec 15, 2025',
         excerpt: 'A chart-topping emotional ballad from Zambias biggest star.',
@@ -163,7 +167,7 @@ const contentData = [
         type: 'song',
         title: 'Chef 187 - Pettition',
         slug: 'chef-187-pettition',
-        artist: 'Chef 187',
+        artists: ['Chef 187'],
         category: 'DOWNLOADS',
         date: 'Dec 18, 2025',
         excerpt: 'The lyrical master returns with another conscious rap banger.',
@@ -177,7 +181,7 @@ const contentData = [
         type: 'song',
         title: 'Slapdee - Mother Tongue',
         slug: 'slapdee-mother-tongue',
-        artist: 'Slapdee',
+        artists: ['Slapdee'],
         category: 'DOWNLOADS',
         date: 'Dec 20, 2025',
         excerpt: 'A powerful celebration of Zambian culture and identity.',
@@ -191,7 +195,7 @@ const contentData = [
         type: 'song',
         title: 'Burna Boy - Last Last',
         slug: 'burna-boy-last-last',
-        artist: 'Burna Boy',
+        artists: ['Burna Boy'],
         category: 'DOWNLOADS',
         date: 'Dec 22, 2025',
         excerpt: 'The global Afrobeats anthem that has taken the world by storm.',
@@ -205,7 +209,7 @@ const contentData = [
         type: 'song',
         title: 'Tems - Free Mind',
         slug: 'tems-free-mind',
-        artist: 'Tems',
+        artists: ['Tems'],
         category: 'DOWNLOADS',
         date: 'Dec 24, 2025',
         excerpt: 'Soulful, ethereal, and deeply moving music from Tems.',
@@ -219,7 +223,7 @@ const contentData = [
         type: 'song',
         title: 'Roberto - Amarulah',
         slug: 'roberto-amarulah',
-        artist: 'Roberto',
+        artists: ['Roberto'],
         category: 'DOWNLOADS',
         date: 'Dec 26, 2025',
         excerpt: 'The dancehall classic that cemented Roberto as a continental star.',
@@ -233,7 +237,7 @@ const contentData = [
         type: 'song',
         title: 'Pompi - Simanjemanje',
         slug: 'pompi-simanjemanje',
-        artist: 'Pompi',
+        artists: ['Pompi'],
         category: 'DOWNLOADS',
         date: 'Dec 28, 2025',
         excerpt: 'Gospel music with a modern, jazzy twist from the Lota House leader.',
@@ -247,7 +251,7 @@ const contentData = [
         type: 'song',
         title: 'Wizkid - Essence',
         slug: 'wizkid-essence',
-        artist: 'Wizkid',
+        artists: ['Wizkid'],
         category: 'DOWNLOADS',
         date: 'Dec 30, 2025',
         excerpt: 'The "song of the summer" that made history on international charts.',
@@ -261,7 +265,7 @@ const contentData = [
         type: 'song',
         title: 'Cleo Ice Queen - Soldier',
         slug: 'cleo-ice-queen-soldier',
-        artist: 'Cleo Ice Queen',
+        artists: ['Cleo Ice Queen'],
         category: 'DOWNLOADS',
         date: 'Jan 01, 2026',
         excerpt: 'A powerful anthem of strength and resilience from Zambia\'s hip-hop royalty.',
@@ -275,7 +279,7 @@ const contentData = [
         type: 'song',
         title: 'Macky 2 - Alabalansa',
         slug: 'macky-2-alabalansa',
-        artist: 'Macky 2',
+        artists: ['Macky 2'],
         category: 'DOWNLOADS',
         date: 'Jan 02, 2026',
         excerpt: 'The king of the streets returns with a message for his fans.',
@@ -440,7 +444,7 @@ function renderArtistProfile(artistName) {
         return;
     }
 
-    const artistItems = contentData.filter(item => item.artist === artistName);
+    const artistItems = contentData.filter(item => item.artists && item.artists.includes(artistName));
     
     if (artistItems.length === 0) {
         headerContainer.innerHTML = '<p>Artist not found.</p>';
@@ -494,7 +498,7 @@ function renderGrid(items, containerId) {
                     </div>
                     <h3 class="text-xl font-bold mt-2 mb-2 line-clamp-1 hover:text-red-500 transition-colors">${item.title}</h3>
                     <p class="text-gray-400 text-sm mb-3">
-                        By <span onclick="event.stopPropagation(); navigateTo('artists/${encodeURIComponent(item.artist)}')" class="text-gray-300 hover:text-red-400 hover:underline transition-colors font-medium">${item.artist}</span>
+                        ${item.artists ? `By ${item.artists.map(artist => `<span onclick="event.stopPropagation(); navigateTo('artists/${encodeURIComponent(artist)}')" class="text-gray-300 hover:text-red-400 hover:underline transition-colors font-medium">${artist}</span>`).join(', ')}` : ''}
                     </p>
                     <p class="text-gray-500 text-xs line-clamp-2">${item.excerpt}</p>
                 </div>
@@ -623,7 +627,7 @@ window.playSong = function(id) {
 
     miniPlayerImg.src = item.imageUrl;
     miniPlayerTitle.textContent = item.title;
-    miniPlayerArtist.textContent = item.artist;
+    miniPlayerArtist.textContent = item.artists.join(', ');
     mainAudio.src = item.audioUrl;
     
     miniPlayer.classList.remove('translate-y-full');
@@ -664,7 +668,7 @@ function performSearch(query) {
     showView('search-results-view');
     const results = contentData.filter(item => 
         item.title.toLowerCase().includes(query.toLowerCase()) || 
-        item.artist?.toLowerCase().includes(query.toLowerCase())
+        (item.artists && item.artists.some(artist => artist.toLowerCase().includes(query.toLowerCase())))
     );
     
     document.getElementById('search-query-display').textContent = query;

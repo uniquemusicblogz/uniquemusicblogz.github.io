@@ -199,6 +199,17 @@
                     </div>
                 </div>
 
+                <div id="artist-view" class="view space-y-8">
+                    <button class="back-btn inline-flex items-center px-4 py-2 bg-gray-700 text-white font-semibold rounded-lg hover:bg-gray-600 transition-colors shadow-lg border border-gray-600" onclick="history.back()">
+                        <i class="fas fa-arrow-left mr-2"></i> Back
+                    </button>
+                    <div id="artist-profile-header" class="bg-gray-800 p-8 rounded-2xl shadow-xl border border-gray-700 flex flex-col md:flex-row gap-8 items-center md:items-start">
+                        <!-- Artist Details Injected Here -->
+                    </div>
+                    <h3 class="text-2xl font-bold border-b border-gray-700 pb-2">Discography</h3>
+                    <div id="artist-content-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+                </div>
+
                 <div id="detail-view" class="view space-y-6">
                     <button id="back-button" class="inline-flex items-center px-4 py-2 bg-gray-700 text-white font-semibold rounded-lg hover:bg-gray-600 transition-colors shadow-lg border border-gray-600">
                         <i class="fas fa-arrow-left mr-2"></i> Back

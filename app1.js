@@ -415,8 +415,8 @@ function routeToPath() {
         performSearch(query);
     } else if (path.startsWith('artists/')) {
         const artistName = decodeURIComponent(path.split('/')[1]);
-        renderArtistProfile(artistName);
         showView('artist-view');
+        renderArtistProfile(artistName);
     } else {
         const parts = path.split('/').filter(p => p);
         if (parts.length >= 2) {
@@ -432,10 +432,19 @@ function routeToPath() {
 
 // --- Artist Profile Rendering ---
 function renderArtistProfile(artistName) {
+    const headerContainer = document.getElementById('artist-profile-header');
+    const contentContainer = document.getElementById('artist-content-grid');
+
+    if (!headerContainer || !contentContainer) {
+        console.error("Artist profile view is not correctly set up in the HTML.");
+        return;
+    }
+
     const artistItems = contentData.filter(item => item.artist === artistName);
     
     if (artistItems.length === 0) {
-        document.getElementById('artist-profile-header').innerHTML = '<p>Artist not found.</p>';
+        headerContainer.innerHTML = '<p>Artist not found.</p>';
+        contentContainer.innerHTML = ''; // Clear previous content
         return;
     }
 
@@ -456,7 +465,7 @@ function renderArtistProfile(artistName) {
         </div>
     `;
 
-    document.getElementById('artist-profile-header').innerHTML = headerHTML;
+    headerContainer.innerHTML = headerHTML;
     renderGrid(artistItems, 'artist-content-grid');
 }
 

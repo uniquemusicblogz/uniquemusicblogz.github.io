@@ -71,8 +71,7 @@ const contentData = [
         excerpt: 'A soulful, melancholic track capturing the raw ache of heartbreak and the desperate wish to turn back time.',
         imageUrl: 'https://picsum.photos/seed/visualizer/600/300', 
         videoUrl: 'https://www.youtube.com/embed/O_5Nixm0dIU',
-        content: '<p>Released on September 8, 2023, "Someday" showcases Jucy young’s signature sentimental style. The track blends soulful, emotive vocals with a poignant narrative focused on the lingering pain of a breakup, the struggle of loneliness, and the deep-seated longing to return to a relationship’s happiest moments.'
-    </p>',
+        content: '<p>Released on September 8, 2023, "Someday" showcases Jucy young’s signature sentimental style. The track blends soulful, emotive vocals with a poignant narrative focused on the lingering pain of a breakup, the struggle of loneliness, and the deep-seated longing to return to a relationship’s happiest moments. </p>',
     },
     {
         id: 4,

@@ -44,7 +44,7 @@ const contentData = [
         audioUrl: 'https://od.lk/s/NTBfMzQ1NzA0MDZf/Phyzo%20the%20Producer%20-%20Final%20Selection%20Cypher%20Mp3.mp3', 
         artistBio: '"Phyzo the producer" is a veteran producer and mixer based in Accra. His signature sound is heavily influenced by 90s West Coast hip-hop.'
     },
-    {
+   /* {
         id: 2,
         type: 'album', 
         title: 'Florence + The Machine - "Celestial Ground" (Full Album)',
@@ -61,7 +61,7 @@ const contentData = [
             { title: "Lighthouse Keeper", duration: "5:12" }
         ],
         zipDownloadLink: '#'
-    },
+    }, */
     {
         id: 3,
         type: 'video',
@@ -73,23 +73,23 @@ const contentData = [
         excerpt: 'A Catchy song.',
         imageUrl: 'https://picsum.photos/seed/visualizer/600/300', 
         videoUrl: 'https://www.youtube.com/embed/O_5Nixm0dIU',
-        content: '<p>Astra\'s new remix of "Neon City" demands a visual experience, and this 4K visualizer delivers.</p>',
+        content:  'A soulful, melancholic track capturing the raw ache of heartbreak and the desperate wish to turn back time.'
     },
     {
-        id: 4,
-        type: 'song',
-        title: 'Jucy Yung - Dreams (feat. Slapdee)',
-        slug: 'jucy-yung-dreams',
-        artists: ['Jucy Yung', 'Slapdee'],
-        category: 'DOWNLOADS',
-        date: 'Oct 25, 2025',
-        excerpt: 'A soulful track about chasing your dreams in a big city.',
-        imageUrl: 'https://picsum.photos/seed/dreams/600/300',
-        downloadLink: '#',
-        audioUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3',
-        artistBio: 'Jucy Yung is an emerging artist with a unique blend of R&B and Soul.'
+      id: 118, 
+      type: 'song',
+      title: 'Slapdee X Dizmo - Asante (ft. Dreckzine)',
+      slug: 'slapdee-x-dizmo-asante-ft-dreckzine',
+      artists: ['Slapdee', 'Dizmo', 'Dreckzine'],
+      category: 'DOWNLOADS',
+      date: 'Jan 21, 2026',
+      excerpt: 'A powerful collaboration bringing together giants. Asante is a masterclass in Zambian hip-hop and lyricism.',
+      imageUrl: 'https://picsum.photos/seed/zambia/600/300',
+      audioUrl: 'https://ia903107.us.archive.org/14/items/slapdee-x-dizmo-asante-ft-dreckzine/Slapdee%20X%20Dizmo%20Asante%20ft%20Dreckzine.mp3',
+      downloadLink: 'https://ia903107.us.archive.org/14/items/slapdee-x-dizmo-asante-ft-dreckzine/Slapdee%20X%20Dizmo%20Asante%20ft%20Dreckzine.mp3',
+      artistBio: 'A powerful collaboration bringing together giants. Asante is a masterclass in Zambian hip-hop and lyricism.'
     },
-    {
+   /* {
         id: 5,
         type: 'album',
         title: 'Vibe Masters - "Night Owl" (EP)',
@@ -106,7 +106,7 @@ const contentData = [
             { title: "City Lights", duration: "2:55" }
         ],
         zipDownloadLink: '#'
-    },
+    }, */
     {
         id: 103,
         type: 'song',

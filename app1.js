@@ -1,3 +1,5 @@
+document.addEventListener('DOMContentLoaded', () => {
+
 // --- Data Definitions ---
 const contentData = [
     {
@@ -728,3 +730,5 @@ mobileMenuButton.addEventListener('click', () => {
 // Initial setup
 renderGrid(contentData, 'home-content-grid');
 routeToPath();
+
+});

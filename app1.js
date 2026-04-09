@@ -291,6 +291,27 @@ const contentData = [
     }
 ];
 
+    function downloadLatest(url, title) {
+    // Show the user something is happening
+    console.log("Starting download for: " + title);
+    
+    fetch(url)
+        .then(response => response.blob())
+        .then(blob => {
+            const blobUrl = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = blobUrl;
+            a.download = title + '.mp3';
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            window.URL.revokeObjectURL(blobUrl);
+        })
+        .catch(() => {
+            // Fallback if the browser blocks the fetch
+            window.open(url, '_blank');
+        });
+}
 // --- Favorites Manager ---
 const Favorites = {
     get() {
@@ -529,16 +550,22 @@ function renderDetail(item) {
                         </div>
                         <h1 class="text-4xl font-black mt-2 mb-4">${item.title}</h1>
                         <p class="text-gray-400 mb-6">Released: ${item.date}</p>
-                        
+
                         <div class="bg-gray-900 p-6 rounded-2xl border border-gray-700 mb-8">
-                            <h3 class="text-xl font-bold mb-4 flex items-center"><i class="fas fa-play-circle mr-2 text-red-500"></i> Listen Now</h3>
-                            <button onclick="playSong(${item.id})" class="w-full bg-red-500 hover:bg-red-600 text-white font-bold py-3 rounded-xl transition-colors flex items-center justify-center gap-2">
-                                <i class="fas fa-play"></i> Play Preview
-                            </button>
-                            <a href="${item.downloadLink}" ${downloadAction} class="w-full mt-3 border border-red-500 text-red-500 hover:bg-red-500 hover:text-white font-bold py-3 rounded-xl transition-all flex items-center justify-center gap-2">
-                                <i class="fas fa-download"></i> Download MP3
-                            </a>
-                        </div>
+                                <h3 class="text-xl font-bold mb-4 flex items-center">
+                                    <i class="fas fa-play-circle mr-2 text-red-500"></i> Listen Now
+                                </h3>
+                                
+                                <button onclick="playSong(${item.id})" class="w-full bg-red-500 hover:bg-red-600 text-white font-bold py-3 rounded-xl transition-colors flex items-center justify-center gap-2">
+                                    <i class="fas fa-play"></i> Play Preview
+                                </button>
+                            
+                                <button onclick="forceDownload('${item.downloadLink}', '${item.title}')" 
+                                        class="w-full mt-3 border border-red-500 text-red-500 hover:bg-red-500 hover:text-white font-bold py-3 rounded-xl transition-all flex items-center justify-center gap-2">
+                                    <i class="fas fa-download"></i> Download MP3
+                                </button>
+                    </div>
+                        
                     </div>
                 </div>
                 <div class="mt-10 prose prose-invert max-w-none">

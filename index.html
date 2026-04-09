@@ -380,27 +380,6 @@
             </p>
         </div>
     </footer>
-
-    <script>
-        // Mobile menu
-        const mBtn = document.getElementById('mobile-menu-button');
-        const mMenu = document.getElementById('mobile-menu');
-        if(mBtn && mMenu){
-            mBtn.addEventListener('click',()=>{
-                mMenu.classList.toggle('hidden');
-                const [o,c] = mBtn.querySelectorAll('svg');
-                o.classList.toggle('hidden');
-                c.classList.toggle('hidden');
-            });
-        }
-        // Active nav state
-        document.querySelectorAll('.nav-link-item').forEach(link=>{
-            link.addEventListener('click',()=>{
-                document.querySelectorAll('.nav-link-item').forEach(l=>l.classList.remove('active'));
-                link.classList.add('active');
-            });
-        });
-    </script>
     <script src="app1.js"></script>
 </body>
 </html>

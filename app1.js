@@ -291,27 +291,7 @@ const contentData = [
     }
 ];
 
-    function downloadLatest(url, title) {
-    // Show the user something is happening
-    console.log("Starting download for: " + title);
-    
-    fetch(url)
-        .then(response => response.blob())
-        .then(blob => {
-            const blobUrl = window.URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = blobUrl;
-            a.download = title + '.mp3';
-            document.body.appendChild(a);
-            a.click();
-            a.remove();
-            window.URL.revokeObjectURL(blobUrl);
-        })
-        .catch(() => {
-            // Fallback if the browser blocks the fetch
-            window.open(url, '_blank');
-        });
-}
+
 // --- Favorites Manager ---
 const Favorites = {
     get() {
@@ -330,6 +310,30 @@ const Favorites = {
     has(id) {
         return this.get().includes(id);
     }
+};
+    // --- Force Download Logic ---
+window.forceDownload = function(url, title) {
+    const safeTitle = title.replace(/[^a-z0-9]/gi, '_').toLowerCase();
+    
+    // Show a small console log so you know it started
+    console.log("Downloading: " + title);
+
+    fetch(url)
+        .then(response => response.blob())
+        .then(blob => {
+            const blobUrl = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = blobUrl;
+            a.download = safeTitle + ".mp3";
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            window.URL.revokeObjectURL(blobUrl);
+        })
+        .catch(() => {
+            // Fallback: Opens in new tab if the fetch is blocked
+            window.open(url, '_blank');
+        });
 };
 
 // --- Helper Functions ---

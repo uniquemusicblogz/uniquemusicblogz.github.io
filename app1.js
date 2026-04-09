@@ -5,16 +5,16 @@ const contentData = [
     {
         id: 116,
         type: 'song',
-        title: 'Jucy Yung - Vibes Only (Brand New)',
-        slug: 'jucy-yung-vibes-only-brand-new',
-        artists: ['Jucy Yung'],
+        title: 'Pompi - Shimwilili Ft. Tasha Nyambe & VOH (Brand New)',
+        slug: 'pompi-shimwilili-ft-nasha-nyambe-voh',
+        artists: ['Pompi', 'Tasha Nyambe', 'Vessils of Honor'],
         category: 'DOWNLOADS',
         date: 'Jan 19, 2026',
-        excerpt: 'The freshest track from Jucy Yung, bringing pure positive energy and soulful melodies for the new year.',
+        excerpt: 'The freshest track from Pompi, reminds us that God is never late and His plans are the best.',
         imageUrl: 'https://picsum.photos/seed/vibesonly/600/300', 
-        downloadLink: '#', 
-        audioUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3', 
-        artistBio: 'Jucy Yung continues to dominate the charts with "Vibes Only," a testament to her evolving sound and dedication to her fans.'
+        downloadLink: 'https://od.lk/d/NTBfMzQ4ODA1MTVf/Pompi%20Shimwilili%20Ft.%20Tasha%20Nyambe%20VOH%20.mp3', 
+        audioUrl: 'https://od.lk/s/NTBfMzQ4ODA1MTVf/Pompi%20Shimwilili%20Ft.%20Tasha%20Nyambe%20VOH%20.mp3', 
+        artistBio: ' Shimwilili by Pompi ft. Tasha Nyambe & (VOH) Vessels of Honor is a powerful Afrogospel worship song about trusting in God’s perfect timing. In every             season waiting, uncertainty, or breakthrough, this song reminds us that God is never late and His plans are always best. Shot in the breathtaking landscapes of             Mountain View Villa in Kafue, Zambia, the visuals reflect a journey of faith, patience, and surrender. Let this song encourage you to worship through every                 circumstance, knowing that God’s timing is perfect.'
     },
     {
         id: 101,
@@ -26,7 +26,7 @@ const contentData = [
         date: 'Nov 15, 2025',
         excerpt: 'A soulful, melancholic track capturing the raw ache of heartbreak and the desperate wish to turn back time.',
         imageUrl: 'https://picsum.photos/seed/snoopjay1/600/300', 
-        downloadLink: 'https://od.lk/s/NTBfMzQ2OTY4OTJf/Jucy%20Yung%20-%20Someday.mp3', 
+        downloadLink: 'https://od.lk/d/NTBfMzQ2OTY4OTJf/Jucy%20Yung%20-%20Someday.mp3', 
         audioUrl: 'https://od.lk/s/NTBfMzQ2OTY4OTJf/Jucy%20Yung%20-%20Someday.mp3', 
         artistBio: 'Released on September 8, 2023, "Someday" showcases Jucy young’s signature sentimental style. The track blends soulful, emotive vocals with a poignant narrative focused on the lingering pain of a breakup, the struggle of loneliness, and the deep-seated longing to return to a relationship’s happiest moments.'
     },

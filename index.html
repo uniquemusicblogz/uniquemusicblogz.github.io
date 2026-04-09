@@ -5,249 +5,402 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name='LTF_verify' content='bb2544bbbb4169dfd429879a46887ad4'/>
     <title>Unique Music Blog | Home</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900;display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4876935105001270"
-     crossorigin="anonymous"></script>
-   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Blog",
-  "name": "Unique Music Blog",
-  "description": "Leading platform for music discovery, artist spotlights, and official music video premieres.",
-  "url": "https://uniquemusicblogz.github.io/"
-}
-</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4876935105001270" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Blog","name":"Unique Music Blog","description":"Leading platform for music discovery, artist spotlights, and official music video premieres.","url":"https://uniquemusicblogz.github.io/"}
+    </script>
+
+    <style>
+        :root {
+            --red: #e8331a;
+            --red-dim: #b52a14;
+            --bg: #0c0c0e;
+            --bg2: #121216;
+            --bg3: #1a1a20;
+            --border: #252530;
+            --border2: #2e2e3a;
+            --text: #e8e6e0;
+            --muted: #6b6a72;
+            --muted2: #4a4952;
+            --glow: rgba(232,51,26,0.13);
+        }
+        *{box-sizing:border-box;}
+        body{background:var(--bg);color:var(--text);font-family:'Syne',sans-serif;min-height:100vh;}
+        ::-webkit-scrollbar{width:4px;}
+        ::-webkit-scrollbar-track{background:var(--bg);}
+        ::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px;}
+
+        /* NAV */
+        #main-header{background:rgba(12,12,14,0.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);}
+        .logo-text{font-family:'Bebas Neue',sans-serif;font-size:1.55rem;letter-spacing:0.1em;color:var(--text);text-decoration:none;}
+        .logo-text span{color:var(--red);}
+        .nav-link-item{font-size:0.68rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);padding:6px 11px;border-radius:4px;text-decoration:none;transition:color .2s,background .2s;}
+        .nav-link-item:hover{color:var(--text);background:var(--bg3);}
+        .nav-link-item.active{color:var(--red);}
+
+        /* TICKER */
+        .ticker-outer{overflow:hidden;background:var(--bg2);border-bottom:1px solid var(--border);padding:0.45rem 0;}
+        .ticker-track{display:flex;animation:ticker 30s linear infinite;white-space:nowrap;}
+        .ticker-item{display:inline-flex;align-items:center;gap:7px;padding:0 2.5rem;font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);}
+        .ticker-dot{width:4px;height:4px;background:var(--red);border-radius:50%;display:inline-block;flex-shrink:0;}
+        @keyframes ticker{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+
+        /* HERO */
+        .hero-block{position:relative;background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:2.5rem;overflow:hidden;margin-bottom:1.75rem;}
+        .hero-block::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 0% 0%,var(--glow) 0%,transparent 55%);pointer-events:none;}
+        .hero-block::after{content:'MUSIC';position:absolute;right:-0.04em;bottom:-0.14em;font-family:'Bebas Neue',sans-serif;font-size:clamp(5rem,13vw,9.5rem);color:rgba(255,255,255,0.022);line-height:1;pointer-events:none;letter-spacing:-0.02em;}
+        .hero-top-line{position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--red) 0%,transparent 60%);}
+        .hero-eyebrow{font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--red);margin-bottom:0.9rem;display:flex;align-items:center;gap:8px;}
+        .hero-eyebrow::before{content:'';display:inline-block;width:18px;height:1px;background:var(--red);}
+        .hero-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.8rem,6vw,5rem);letter-spacing:0.04em;color:var(--text);line-height:1;margin-bottom:0.9rem;position:relative;}
+        .hero-sub{font-size:0.75rem;color:var(--muted);line-height:1.85;max-width:460px;font-family:'DM Mono',monospace;letter-spacing:0.03em;position:relative;}
+
+        /* SECTION HEAD */
+        .section-head{display:flex;align-items:center;gap:10px;margin-bottom:0.35rem;}
+        .section-head h2,.section-head h3{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:0.1em;color:var(--text);}
+        .section-line{flex:1;height:1px;background:var(--border);}
+        .section-sub{font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.06em;margin-bottom:1.25rem;}
+
+        /* SIDEBAR */
+        .sidebar-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:1.2rem;}
+        .sidebar-card h3{font-family:'Bebas Neue',sans-serif;font-size:0.95rem;letter-spacing:0.12em;color:var(--text);border-bottom:1px solid var(--border);padding-bottom:0.55rem;margin-bottom:0.9rem;}
+        .search-input{width:100%;padding:8px 34px 8px 11px;background:var(--bg3);border:1px solid var(--border2);border-radius:6px;color:var(--text);font-family:'DM Mono',monospace;font-size:0.73rem;outline:none;transition:border-color .2s;}
+        .search-input:focus{border-color:var(--red);}
+        .search-input::placeholder{color:var(--muted2);}
+        .cat-link{display:flex;align-items:center;gap:9px;padding:7px 9px;border-radius:6px;font-size:0.78rem;font-weight:600;color:var(--muted);text-decoration:none;transition:all .2s;letter-spacing:0.04em;}
+        .cat-link:hover{background:var(--bg3);color:var(--text);}
+        .cat-link i{color:var(--red);width:13px;font-size:0.8rem;}
+        .social-btn{display:flex;align-items:center;justify-content:center;gap:7px;padding:8px 12px;border-radius:6px;font-size:0.72rem;font-weight:700;letter-spacing:0.06em;text-decoration:none;transition:opacity .2s,transform .15s;border:1px solid transparent;}
+        .social-btn:hover{opacity:.83;transform:translateY(-1px);}
+        .newsletter-input{width:100%;padding:8px 11px;background:var(--bg3);border:1px solid var(--border2);border-radius:6px;color:var(--text);font-family:'DM Mono',monospace;font-size:0.73rem;outline:none;transition:border-color .2s;margin-bottom:7px;}
+        .newsletter-input:focus{border-color:var(--red);}
+        .newsletter-input::placeholder{color:var(--muted2);}
+        .subscribe-btn{width:100%;padding:9px;background:var(--red);color:#fff;border:none;border-radius:6px;font-family:'Syne',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;transition:background .2s;}
+        .subscribe-btn:hover{background:var(--red-dim);}
+
+        /* ABOUT */
+        .about-box{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:1.75rem;line-height:1.9;font-size:0.83rem;color:#aaa9b2;}
+        .about-box a{color:var(--red);text-decoration:none;}
+        .about-box a:hover{text-decoration:underline;}
+
+        /* BACK BTN */
+        .back-btn{display:inline-flex;align-items:center;gap:7px;padding:7px 15px;background:var(--bg3);border:1px solid var(--border2);border-radius:6px;color:var(--text);font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;transition:all .2s;}
+        .back-btn:hover{background:var(--bg2);border-color:var(--red);color:var(--red);}
+
+        /* ARTIST */
+        #artist-profile-header{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:2rem;}
+
+        /* DETAIL */
+        #content-display-container{background:var(--bg2);border:1px solid var(--border);border-radius:12px;overflow:hidden;}
+
+        /* MINI PLAYER */
+        #mini-player{background:rgba(18,18,22,0.97);backdrop-filter:blur(16px);border-top:1px solid var(--border);}
+        #mini-player h4{font-size:0.78rem;font-weight:700;}
+        #mini-player p{font-size:0.68rem;color:var(--muted);}
+        #audio-play-pause{color:var(--red);font-size:1.35rem;background:none;border:none;cursor:pointer;}
+        #audio-play-pause:hover{color:#ff5a42;}
+        #close-mini-player{color:var(--muted);background:none;border:none;cursor:pointer;transition:color .2s;}
+        #close-mini-player:hover{color:var(--text);}
+
+        /* MOBILE MENU */
+        #mobile-menu{background:var(--bg2);border-top:1px solid var(--border);}
+        #mobile-menu a{font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);padding:9px 12px;border-radius:6px;display:block;text-decoration:none;}
+        #mobile-menu a:hover{color:var(--text);background:var(--bg3);}
+
+        /* FOOTER */
+        footer{background:var(--bg2);border-top:1px solid var(--border);}
+        footer a{text-decoration:none;transition:color .2s;}
+        footer a:hover{color:var(--red) !important;}
+
+        /* VIEWS */
+        .view{display:none;}
+        .view.active{display:block;}
+
+        /* ANIMATIONS */
+        @keyframes fadeIn{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+        .hero-block{animation:fadeIn .45s ease both;}
+        .section-head{animation:fadeIn .45s ease .1s both;}
+
+        @media(max-width:768px){.hero-title{font-size:2.5rem;}}
+    </style>
 </head>
 <body class="min-h-screen flex flex-col">
 
-    <header class="sticky top-0 z-50 bg-gray-900 shadow-lg">
+    <!-- HEADER -->
+    <header id="main-header" class="sticky top-0 z-50 shadow-xl">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex-shrink-0">
-                    <a href="https://uniquemusicblogz.github.io/" class="text-xl sm:text-2xl font-black text-white nav-link tracking-wide" data-view="home-view">
-                        <span class="text-red-500">Unique</span> Music Blog
+            <div class="flex justify-between items-center h-14">
+                <a href="https://uniquemusicblogz.github.io/" class="logo-text nav-link" data-view="home-view">
+                    <span>Unique</span> Music Blog
+                </a>
+                <div class="hidden md:flex items-center gap-1">
+                    <a href="https://uniquemusicblogz.github.io/" class="nav-link-item nav-link active" data-view="home-view">Home</a>
+                    <a href="#/albums/" class="nav-link-item nav-link" data-view="albums-view">Albums</a>
+                    <a href="#/videos/" class="nav-link-item nav-link" data-view="videos-view">Videos</a>
+                    <a href="#/downloads/" class="nav-link-item nav-link" data-view="downloads-view">Downloads</a>
+                    <a href="#/favorites/" class="nav-link-item nav-link" data-view="favorites-view">
+                        <i class="fas fa-heart mr-1 text-xs" style="color:var(--red);"></i>Favorites
                     </a>
+                    <a href="#/about/" class="nav-link-item nav-link" data-view="about-view">About</a>
                 </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="https://uniquemusicblogz.github.io/" class="nav-link text-gray-300 hover:text-red-500 px-3 py-2 rounded-md text-sm font-medium" data-view="home-view">Home</a>
-                        <a href="#/albums/" class="nav-link text-gray-300 hover:text-red-500 px-3 py-2 rounded-md text-sm font-medium" data-view="albums-view">Albums</a>
-                        <a href="#/videos/" class="nav-link text-gray-300 hover:text-red-500 px-3 py-2 rounded-md text-sm font-medium" data-view="videos-view">Videos</a>
-                        <a href="#/downloads/" class="nav-link text-gray-300 hover:text-red-500 px-3 py-2 rounded-md text-sm font-medium" data-view="downloads-view">Downloads</a>
-                        <a href="#/favorites/" class="nav-link text-gray-300 hover:text-red-500 px-3 py-2 rounded-md text-sm font-medium" data-view="favorites-view"><i class="fas fa-heart mr-1"></i>Favorites</a>
-                        <a href="#/about/" class="nav-link text-gray-300 hover:text-red-500 px-3 py-2 rounded-md text-sm font-medium" data-view="about-view">About</a>
-                    </div>
-                </div>
-                <div class="-mr-2 flex md:hidden">
-                    <button type="button" id="mobile-menu-button" class="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none">
-                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-                </div>
+                <button type="button" id="mobile-menu-button" class="md:hidden p-2 rounded-md" style="background:var(--bg3);border:1px solid var(--border);color:var(--muted);">
+                    <svg class="block h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    <svg class="hidden h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
             </div>
         </nav>
-
         <div class="md:hidden hidden" id="mobile-menu">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="https://uniquemusicblogz.github.io/" class="nav-link text-gray-300 hover:text-red-500 block px-3 py-2 rounded-md text-base font-medium" data-view="home-view">Home</a>
-                <a href="#/albums/" class="nav-link text-gray-300 hover:text-red-500 block px-3 py-2 rounded-md text-base font-medium" data-view="albums-view">Albums</a>
-                <a href="#/videos/" class="nav-link text-gray-300 hover:text-red-500 block px-3 py-2 rounded-md text-base font-medium" data-view="videos-view">Videos</a>
-                <a href="#/downloads/" class="nav-link text-gray-300 hover:text-red-500 block px-3 py-2 rounded-md text-base font-medium" data-view="downloads-view">Downloads</a>
-                <a href="#/favorites/" class="nav-link text-gray-300 hover:text-red-500 block px-3 py-2 rounded-md text-base font-medium" data-view="favorites-view">Favorites</a>
-                <a href="#/about/" class="nav-link text-gray-300 hover:text-red-500 block px-3 py-2 rounded-md text-base font-medium" data-view="about-view">About</a>
+            <div class="px-3 py-2 space-y-1">
+                <a href="https://uniquemusicblogz.github.io/" class="nav-link" data-view="home-view">Home</a>
+                <a href="#/albums/" class="nav-link" data-view="albums-view">Albums</a>
+                <a href="#/videos/" class="nav-link" data-view="videos-view">Videos</a>
+                <a href="#/downloads/" class="nav-link" data-view="downloads-view">Downloads</a>
+                <a href="#/favorites/" class="nav-link" data-view="favorites-view">Favorites</a>
+                <a href="#/about/" class="nav-link" data-view="about-view">About</a>
             </div>
         </div>
     </header>
 
+    <!-- TICKER -->
+    <div class="ticker-outer">
+        <div class="ticker-track">
+            <span class="ticker-item"><span class="ticker-dot"></span>New drop · Artist spotlight this week</span>
+            <span class="ticker-item"><span class="ticker-dot"></span>Official premiere · Stream now</span>
+            <span class="ticker-item"><span class="ticker-dot"></span>Free album download available</span>
+            <span class="ticker-item"><span class="ticker-dot"></span>Latest music videos updated</span>
+            <span class="ticker-item"><span class="ticker-dot"></span>New MP3 singles added</span>
+            <span class="ticker-item"><span class="ticker-dot"></span>New drop · Artist spotlight this week</span>
+            <span class="ticker-item"><span class="ticker-dot"></span>Official premiere · Stream now</span>
+            <span class="ticker-item"><span class="ticker-dot"></span>Free album download available</span>
+            <span class="ticker-item"><span class="ticker-dot"></span>Latest music videos updated</span>
+            <span class="ticker-item"><span class="ticker-dot"></span>New MP3 singles added</span>
+        </div>
+    </div>
+
+    <!-- PAGE BODY -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-8 w-full flex-grow">
-        <div class="flex flex-col md:flex-row-reverse gap-8">
-            
-            <aside class="w-full md:w-1/4 space-y-8 md:sticky md:top-24 h-full">
-                <div class="bg-gray-800 p-4 rounded-lg shadow-lg border border-gray-700">
-                    <h3 class="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">Search Site</h3>
+        <div class="flex flex-col md:flex-row-reverse gap-7">
+
+            <!-- SIDEBAR -->
+            <aside class="w-full md:w-1/4 space-y-5 md:sticky md:top-24 h-full">
+
+                <div class="sidebar-card">
+                    <h3>Search Site</h3>
                     <div class="relative">
-                        <input type="search" id="search-bar" placeholder="Search music..." class="w-full px-3 py-2 bg-gray-700 text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500">
-                        <i id="search-icon-btn" class="fas fa-search absolute right-3 top-3 text-gray-400 cursor-pointer hover:text-white transition-colors"></i>
+                        <input type="search" id="search-bar" placeholder="Search music..." class="search-input" autocomplete="off">
+                        <i id="search-icon-btn" class="fas fa-search absolute right-3 top-1/2 -translate-y-1/2 text-xs cursor-pointer hover:text-white transition-colors" style="color:var(--muted);"></i>
                     </div>
                 </div>
 
-                <div class="bg-gray-800 p-4 rounded-lg shadow-lg border border-gray-700">
-                    <h3 class="text-xl font-semibold mb-4 border-b border-gray-700 pb-2 hidden md:block">Top Categories</h3>
-                    <ul class="flex flex-row md:flex-col gap-2 md:space-y-3 overflow-x-auto pb-2 md:pb-0">
-                        <li class="flex-shrink-0"><a href="#/albums/" class="nav-link block bg-gray-700 md:bg-transparent px-4 py-2 md:p-0 rounded-full md:rounded-none text-sm md:text-base hover:text-red-500 transition-colors" data-view="albums-view"><i class="fas fa-compact-disc mr-2 text-red-500"></i>Albums</a></li>
-                        <li class="flex-shrink-0"><a href="#/videos/" class="nav-link block bg-gray-700 md:bg-transparent px-4 py-2 md:p-0 rounded-full md:rounded-none text-sm md:text-base hover:text-red-500 transition-colors" data-view="videos-view"><i class="fas fa-video mr-2 text-red-500"></i>Videos</a></li>
-                        <li class="flex-shrink-0"><a href="#/downloads/" class="nav-link block bg-gray-700 md:bg-transparent px-4 py-2 md:p-0 rounded-full md:rounded-none text-sm md:text-base hover:text-red-500 transition-colors" data-view="downloads-view"><i class="fas fa-download mr-2 text-red-500"></i>MP3s</a></li>
-                    </ul>
+                <div class="sidebar-card">
+                    <h3 class="hidden md:block">Top Categories</h3>
+                    <div class="flex flex-row md:flex-col gap-1 overflow-x-auto pb-1 md:pb-0">
+                        <a href="#/albums/" class="cat-link nav-link" data-view="albums-view">
+                            <i class="fas fa-compact-disc"></i>Albums
+                        </a>
+                        <a href="#/videos/" class="cat-link nav-link" data-view="videos-view">
+                            <i class="fas fa-video"></i>Videos
+                        </a>
+                        <a href="#/downloads/" class="cat-link nav-link" data-view="downloads-view">
+                            <i class="fas fa-download"></i>MP3s
+                        </a>
+                    </div>
                 </div>
 
-                <div class="bg-gray-800 p-4 rounded-lg shadow-lg border border-gray-700 hidden md:block">
-    <h3 class="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">Follow Us</h3>
-    <div class="flex flex-col gap-3">
-        <a href="https://www.facebook.com/profile.php?id=100095513534854" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md text-center transition-colors">
-            <i class="fab fa-facebook-f mr-2"></i> Facebook
-        </a>
-        
-        <a href="https://x.com/Nellohx" target="_blank" class="bg-black hover:bg-gray-900 text-white font-bold py-2 px-4 rounded-md text-center transition-colors border border-gray-600">
-            <i class="fab fa-x-twitter mr-2"></i> X
-        </a>
-        
-        <a href="https://www.instagram.com/officialsimumba" target="_blank" class="bg-gradient-to-r from-purple-600 via-pink-500 to-orange-400 hover:opacity-90 text-white font-bold py-2 px-4 rounded-md text-center transition-colors">
-            <i class="fab fa-instagram mr-2"></i> Instagram
-        </a>
+                <div class="sidebar-card hidden md:block">
+                    <h3>Follow Us</h3>
+                    <div class="flex flex-col gap-2">
+                        <a href="https://www.facebook.com/profile.php?id=100095513534854" target="_blank" class="social-btn text-white" style="background:#1877f2;border-color:#1877f2;">
+                            <i class="fab fa-facebook-f text-xs"></i> Facebook
+                        </a>
+                        <a href="https://x.com/Nellohx" target="_blank" class="social-btn text-white" style="background:#111;border-color:var(--border2);">
+                            <i class="fab fa-x-twitter text-xs"></i> X / Twitter
+                        </a>
+                        <a href="https://www.instagram.com/officialsimumba" target="_blank" class="social-btn text-white" style="background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);border-color:transparent;">
+                            <i class="fab fa-instagram text-xs"></i> Instagram
+                        </a>
+                        <a href="https://www.youtube.com/@Joyfulmotivator1" target="_blank" class="social-btn text-white" style="background:#ff0000;border-color:#ff0000;">
+                            <i class="fab fa-youtube text-xs"></i> YouTube
+                        </a>
+                    </div>
+                </div>
 
-        <a href="https://www.youtube.com/@Joyfulmotivator1" target="_blank" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-md text-center transition-colors">
-            <i class="fab fa-youtube mr-2"></i> YouTube
-        </a>
-    </div>
-</div>
-
-                <div class="bg-gray-800 p-4 rounded-lg shadow-lg border border-gray-700 hidden md:block">
-                    <h3 class="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">Newsletter</h3>
-                    <p class="text-sm text-gray-400 mb-4">Stay updated with the latest music releases.</p>
-                    <form action="https://formspree.io/f/meeqwbee" method="POST" class="flex flex-col gap-2">
-                        <input type="email" name="email" placeholder="Your email..." required class="px-3 py-2 bg-gray-700 text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500">
-                        <button type="submit" class="bg-red-500 text-white font-bold py-2 rounded-md hover:bg-red-600 transition-colors">Subscribe</button>
+                <div class="sidebar-card hidden md:block">
+                    <h3>Newsletter</h3>
+                    <p style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.04em;margin-bottom:11px;line-height:1.8;">Stay updated with the latest music releases.</p>
+                    <form action="https://formspree.io/f/meeqwbee" method="POST">
+                        <input type="email" name="email" placeholder="Your email..." class="newsletter-input" required>
+                        <button type="submit" class="subscribe-btn">Subscribe</button>
                     </form>
                 </div>
+
             </aside>
 
+            <!-- MAIN -->
             <main class="w-full md:w-3/4 space-y-8">
-                
-                <div id="home-view" class="view space-y-8">
-                    <div class="bg-gradient-to-r from-red-600 to-gray-800 p-6 md:p-8 rounded-2xl shadow-2xl mb-8">
-                        <h1 class="text-3xl md:text-6xl font-black mb-4">Uncover New Sounds</h1>
-                        <p class="text-lg md:text-xl text-gray-200"> The ultimate destination for music discovery, artist spotlights, and official premieres</p>
+
+                <!-- HOME -->
+                <div id="home-view" class="view active space-y-5">
+                    <div class="hero-block">
+                        <div class="hero-top-line"></div>
+                        <div class="hero-eyebrow">Music Discovery · Spotlights · Premieres</div>
+                        <h1 class="hero-title">Uncover New<br>Sounds</h1>
+                        <p class="hero-sub">The ultimate destination for music discovery, artist spotlights, and official premieres.</p>
                     </div>
-                    <h2 class="text-3xl font-bold mb-1">Latest & Featured</h2>
-                    <p class="text-gray-400 mb-4">The newest music and the stories behind the artists.</p>
-                    <div id="home-content-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+                    <div class="section-head">
+                        <h2>Latest &amp; Featured</h2>
+                        <div class="section-line"></div>
+                    </div>
+                    <p class="section-sub">The newest music and the stories behind the artists.</p>
+                    <div id="home-content-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
                 </div>
 
-                <div id="albums-view" class="view space-y-8">
-                    <h2 class="text-3xl font-bold mb-1">Free Album Downloads</h2>
-                    <div id="albums-content-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
-                </div>
-                
-                <div id="videos-view" class="view space-y-8">
-                    <h2 class="text-3xl font-bold mb-1">Music Videos</h2>
-                    <div id="videos-content-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+                <!-- ALBUMS -->
+                <div id="albums-view" class="view space-y-5">
+                    <div class="section-head"><h2>Free Album Downloads</h2><div class="section-line"></div></div>
+                    <div id="albums-content-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
                 </div>
 
-                <div id="downloads-view" class="view space-y-8">
-                    <h2 class="text-3xl font-bold mb-1">Free MP3 Singles</h2>
-                    <div id="downloads-content-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+                <!-- VIDEOS -->
+                <div id="videos-view" class="view space-y-5">
+                    <div class="section-head"><h2>Music Videos</h2><div class="section-line"></div></div>
+                    <div id="videos-content-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
                 </div>
 
-                <div id="favorites-view" class="view space-y-8">
-                    <h2 class="text-3xl font-bold mb-1">Your Favorites</h2>
-                    <p class="text-gray-400 mb-4">Songs and albums you've saved for later.</p>
-                    <div id="favorites-content-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+                <!-- DOWNLOADS -->
+                <div id="downloads-view" class="view space-y-5">
+                    <div class="section-head"><h2>Free MP3 Singles</h2><div class="section-line"></div></div>
+                    <div id="downloads-content-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
                 </div>
 
-                <div id="search-results-view" class="view space-y-8">
-                    <h2 class="text-3xl font-bold mb-1">Search Results for: "<span id="search-query-display" class="text-red-500"></span>"</h2>
-                    <p id="search-count-display" class="text-gray-400 mb-4"></p>
-                    <div id="search-content-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+                <!-- FAVORITES -->
+                <div id="favorites-view" class="view space-y-5">
+                    <div class="section-head"><h2>Your Favorites</h2><div class="section-line"></div></div>
+                    <p class="section-sub">Songs and albums you've saved for later.</p>
+                    <div id="favorites-content-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
                 </div>
 
-                <div id="about-view" class="view space-y-4">
-                    <h2 class="text-3xl font-bold mb-4">About Unique Music Blog</h2>
-                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg space-y-4 text-gray-300 leading-relaxed border border-gray-700">
+                <!-- SEARCH RESULTS -->
+                <div id="search-results-view" class="view space-y-5">
+                    <div class="section-head">
+                        <h2>Results for "<span id="search-query-display" style="color:var(--red);"></span>"</h2>
+                        <div class="section-line"></div>
+                    </div>
+                    <p id="search-count-display" class="section-sub"></p>
+                    <div id="search-content-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+                </div>
+
+                <!-- ABOUT -->
+                <div id="about-view" class="view space-y-5">
+                    <div class="section-head"><h2>About Unique Music Blog</h2><div class="section-line"></div></div>
+                    <div class="about-box space-y-4">
                         <p>Welcome to Unique Music Blog, your new home for music discovery. We are a passionate collective of writers, musicians, and fans dedicated to uncovering the best new music and sharing the stories behind it.</p>
                         <p>Our mission is simple: to champion the artists we believe in. Whether it's through an in-depth album download, an exclusive feature, or a free single, we strive to provide thoughtful, engaging, and authentic content.</p>
-                        <div class="space-y-2">
-    <p>
-        Contact Details: 
-        <a href="mailto:uniquemusicblog@ceo.com" class="text-red-500 font-semibold hover:underline transition-all">
-            uniquemusicblog@ceo.com
-        </a>
-    </p>
-
-    <p>
-        Phone: 
-        <a href="tel:+260978642260" class="text-red-500 font-semibold hover:underline transition-all">
-            +260978642260
-        </a>
-    </p>
-</div>
+                        <p>Contact: <a href="mailto:uniquemusicblog@ceo.com">uniquemusicblog@ceo.com</a></p>
+                        <p>Phone: <a href="tel:+260978642260">+260978642260</a></p>
                     </div>
                 </div>
 
-                <div id="artist-view" class="view space-y-8">
-                    <button class="back-btn inline-flex items-center px-4 py-2 bg-gray-700 text-white font-semibold rounded-lg hover:bg-gray-600 transition-colors shadow-lg border border-gray-600" onclick="history.back()">
-                        <i class="fas fa-arrow-left mr-2"></i> Back
+                <!-- ARTIST -->
+                <div id="artist-view" class="view space-y-5">
+                    <button class="back-btn" onclick="history.back()">
+                        <i class="fas fa-arrow-left text-xs"></i> Back
                     </button>
-                    <div id="artist-profile-header" class="bg-gray-800 p-8 rounded-2xl shadow-xl border border-gray-700 flex flex-col md:flex-row gap-8 items-center md:items-start">
-                        <!-- Artist Details Injected Here -->
+                    <div id="artist-profile-header" class="flex flex-col md:flex-row gap-8 items-center md:items-start"></div>
+                    <div class="section-head">
+                        <h3>Discography</h3>
+                        <div class="section-line"></div>
                     </div>
-                    <h3 class="text-2xl font-bold border-b border-gray-700 pb-2">Discography</h3>
-                    <div id="artist-content-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+                    <div id="artist-content-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
                 </div>
 
-                <div id="detail-view" class="view space-y-6">
-                    <button id="back-button" class="inline-flex items-center px-4 py-2 bg-gray-700 text-white font-semibold rounded-lg hover:bg-gray-600 transition-colors shadow-lg border border-gray-600">
-                        <i class="fas fa-arrow-left mr-2"></i> Back
+                <!-- DETAIL -->
+                <div id="detail-view" class="view space-y-5">
+                    <button id="back-button" class="back-btn">
+                        <i class="fas fa-arrow-left text-xs"></i> Back
                     </button>
-                    <div id="content-display-container" class="bg-gray-800 rounded-2xl shadow-2xl overflow-hidden border border-gray-700"></div>
+                    <div id="content-display-container"></div>
                 </div>
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4876935105001270"
-     crossorigin="anonymous"></script>
-<!-- Google Ads -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-4876935105001270"
-     data-ad-slot="4827621853"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
+                <!-- Ad -->
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4876935105001270"
+                    data-ad-slot="4827621853" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
             </main>
         </div>
     </div>
 
-    <!-- Persistent Music Player -->
-    <div id="mini-player" class="fixed bottom-0 left-0 right-0 bg-gray-900 border-t border-gray-800 p-4 z-50 transform translate-y-full transition-transform duration-300 flex items-center gap-4">
-        <img id="mini-player-img" src="" class="w-12 h-12 rounded-lg object-cover bg-gray-800">
+    <!-- MINI PLAYER -->
+    <div id="mini-player" class="fixed bottom-0 left-0 right-0 z-50 transform translate-y-full transition-transform duration-300 flex items-center gap-4 px-4 py-3">
+        <div id="audio-progress" style="position:absolute;top:0;left:0;height:2px;background:var(--red);width:0%;transition:width .1s;"></div>
+        <img id="mini-player-img" src="" class="w-11 h-11 rounded-lg object-cover" style="background:var(--bg3);">
         <div class="flex-grow overflow-hidden">
-            <h4 id="mini-player-title" class="text-sm font-bold truncate">Song Title</h4>
-            <p id="mini-player-artist" class="text-xs text-gray-400 truncate">Artist Name</p>
+            <h4 id="mini-player-title" class="truncate">Song Title</h4>
+            <p id="mini-player-artist" class="truncate">Artist Name</p>
         </div>
         <audio id="main-audio" class="hidden"></audio>
         <div class="flex items-center gap-4">
-            <button id="audio-play-pause" class="text-2xl text-red-500 hover:text-red-400"><i class="fas fa-play"></i></button>
-            <button id="close-mini-player" class="text-gray-500 hover:text-white"><i class="fas fa-times"></i></button>
+            <button id="audio-play-pause"><i class="fas fa-play"></i></button>
+            <button id="close-mini-player"><i class="fas fa-times text-sm"></i></button>
         </div>
-        <div class="absolute top-0 left-0 h-1 bg-red-500 transition-all duration-100" id="audio-progress" style="width: 0%"></div>
     </div>
-<footer class="bg-gray-900 text-gray-500 py-12 mt-12 border-t border-gray-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div class="flex justify-center space-x-6 mb-8">
-            <a href="https://www.facebook.com/profile.php?id=100095513534854" target="_blank" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-facebook-f text-2xl"></i></a>
-            <a href="https://x.com/Nellohx" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-twitter text-2xl"></i></a>
-            <a href="https://www.instagram.com/officialsimumba" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-instagram text-2xl"></i></a>
-            <a href="https://www.youtube.com/@Joyfulmotivator1" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-youtube text-2xl"></i></a>
-        </div>
-        
-        <div class="flex justify-center space-x-4 mb-4 text-sm">
-            <a href="privacy.html" class="hover:text-red-500">Privacy Policy</a>
-            <span class="text-gray-700">|</span>
-            <a href="terms.html" class="hover:text-red-500">Terms of Service</a>
-        </div>
 
-        <p class="mb-2">&copy; 2026 <a href="https://uniquemusicblogz.github.io/" class="text-gray-500 hover:underline">Unique Music Blog.</a> All Rights Reserved.</p>
-        <p>Designed by <a href="https://www.facebook.com/people/Brian-Simumba/100095513534854/" class="text-red-500 hover:underline">Brian Simumba</a></p>
-    </div>
-</footer>
+    <!-- FOOTER -->
+    <footer class="py-10 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <a class="logo-text" href="https://uniquemusicblogz.github.io/" style="display:inline-block;margin-bottom:1.4rem;font-size:1.35rem;">
+                <span>Unique</span> Music Blog
+            </a>
+            <div class="flex justify-center gap-5 mb-5">
+                <a href="https://www.facebook.com/profile.php?id=100095513534854" target="_blank" style="color:var(--muted);font-size:1.05rem;"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://x.com/Nellohx" target="_blank" style="color:var(--muted);font-size:1.05rem;"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/officialsimumba" target="_blank" style="color:var(--muted);font-size:1.05rem;"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@Joyfulmotivator1" target="_blank" style="color:var(--muted);font-size:1.05rem;"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="flex justify-center gap-4 mb-4" style="font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);">
+                <a href="privacy.html" style="color:var(--muted);">Privacy Policy</a>
+                <span style="color:var(--border2);">|</span>
+                <a href="terms.html" style="color:var(--muted);">Terms of Service</a>
+            </div>
+            <p style="font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.06em;color:var(--muted2);">
+                &copy; 2026 <a href="https://uniquemusicblogz.github.io/" style="color:var(--muted);">Unique Music Blog.</a> All Rights Reserved.
+            </p>
+            <p style="font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.06em;color:var(--muted2);margin-top:4px;">
+                Designed by <a href="https://www.facebook.com/people/Brian-Simumba/100095513534854/" style="color:var(--red);">Brian Simumba</a>
+            </p>
+        </div>
+    </footer>
 
+    <script>
+        // Mobile menu
+        const mBtn = document.getElementById('mobile-menu-button');
+        const mMenu = document.getElementById('mobile-menu');
+        if(mBtn && mMenu){
+            mBtn.addEventListener('click',()=>{
+                mMenu.classList.toggle('hidden');
+                const [o,c] = mBtn.querySelectorAll('svg');
+                o.classList.toggle('hidden');
+                c.classList.toggle('hidden');
+            });
+        }
+        // Active nav state
+        document.querySelectorAll('.nav-link-item').forEach(link=>{
+            link.addEventListener('click',()=>{
+                document.querySelectorAll('.nav-link-item').forEach(l=>l.classList.remove('active'));
+                link.classList.add('active');
+            });
+        });
+    </script>
     <script src="app1.js"></script>
 </body>
 </html>

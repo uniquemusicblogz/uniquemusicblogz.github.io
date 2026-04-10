@@ -11,7 +11,7 @@ const contentData = [
         category: 'DOWNLOADS',
         date: 'Jan 19, 2026',
         excerpt: 'The freshest track from Pompi, reminds us that God is never late and His plans are the best.',
-        imageUrl: 'https://picsum.photos/seed/vibesonly/600/300', 
+        imageUrl: 'https://archive.org/download/uniquemusicbloglogo/uniquemusicbloglogo.png', 
         audioUrl: 'https://ia601804.us.archive.org/11/items/pompi-shimwilili-ft.-tasha-nyambe-voh/Pompi%20Shimwilili%20Ft.%20Tasha%20Nyambe%20VOH%20.mp3',
         downloadLink: 'https://ia601804.us.archive.org/11/items/pompi-shimwilili-ft.-tasha-nyambe-voh/Pompi%20Shimwilili%20Ft.%20Tasha%20Nyambe%20VOH%20.mp3',
         artistBio: ' Shimwilili by Pompi ft. Tasha Nyambe & (VOH) Vessels of Honor is a powerful Afrogospel worship song about trusting in God’s perfect timing. In every season waiting, uncertainty, or breakthrough, this song reminds us that God is never late and His plans are always best. Shot in the breathtaking landscapes of             Mountain View Villa in Kafue, Zambia, the visuals reflect a journey of faith, patience, and surrender. Let this song encourage you to worship through every                 circumstance, knowing that God’s timing is perfect.'
@@ -25,7 +25,7 @@ const contentData = [
         category: 'DOWNLOADS',
         date: 'Nov 15, 2025',
         excerpt: 'A soulful, melancholic track capturing the raw ache of heartbreak and the desperate wish to turn back time.',
-        imageUrl: 'https://picsum.photos/seed/snoopjay1/600/300', 
+        imageUrl: 'https://archive.org/download/uniquemusicbloglogo/uniquemusicbloglogo.png', 
         audioUrl: 'https://ia600907.us.archive.org/12/items/jucy-yung-someday/Jucy%20Yung%20-%20Someday.mp3',
         downloadLink: 'https://ia600907.us.archive.org/12/items/jucy-yung-someday/Jucy%20Yung%20-%20Someday.mp3', 
         artistBio: 'Released on September 8, 2023, "Someday" showcases Jucy young’s signature sentimental style. The track blends soulful, emotive vocals with a poignant narrative focused on the lingering pain of a breakup, the struggle of loneliness, and the deep-seated longing to return to a relationship’s happiest moments.'
@@ -39,7 +39,7 @@ const contentData = [
         category: 'DOWNLOADS',
         date: 'Nov 12, 2022',
         excerpt: 'A fresh new instrumental track perfect for late-night cruising.',
-        imageUrl: 'https://picsum.photos/seed/djken/600/300',
+        imageUrl: 'https://archive.org/download/uniquemusicbloglogo/uniquemusicbloglogo.png',
         downloadLink: 'https://od.lk/d/NTBfMzQ1NzA0MDZf/Phyzo%20the%20Producer%20-%20Final%20Selection%20Cypher%20Mp3.mp3', 
         audioUrl: 'https://od.lk/s/NTBfMzQ1NzA0MDZf/Phyzo%20the%20Producer%20-%20Final%20Selection%20Cypher%20Mp3.mp3', 
         artistBio: '"Phyzo the producer" is a veteran producer and mixer based in Accra. His signature sound is heavily influenced by 90s West Coast hip-hop.'
@@ -71,7 +71,7 @@ const contentData = [
         category: 'VIDEOS',
         date: 'Nov 10, 2025',
         excerpt: 'A Catchy song.',
-        imageUrl: 'https://picsum.photos/seed/visualizer/600/300', 
+        imageUrl: 'https://archive.org/download/uniquemusicbloglogo/uniquemusicbloglogo.png', 
         videoUrl: 'https://www.youtube.com/embed/O_5Nixm0dIU',
         content:  'A soulful, melancholic track capturing the raw ache of heartbreak and the desperate wish to turn back time.'
     },
@@ -84,7 +84,7 @@ const contentData = [
       category: 'DOWNLOADS',
       date: 'Jan 21, 2026',
       excerpt: 'A powerful collaboration bringing together giants. Asante is a masterclass in Zambian hip-hop and lyricism.',
-      imageUrl: 'https://picsum.photos/seed/zambia/600/300',
+      imageUrl: 'https://archive.org/download/uniquemusicbloglogo/uniquemusicbloglogo.png',
       audioUrl: 'https://ia903107.us.archive.org/14/items/slapdee-x-dizmo-asante-ft-dreckzine/Slapdee%20X%20Dizmo%20Asante%20ft%20Dreckzine.mp3',
       downloadLink: 'https://ia903107.us.archive.org/14/items/slapdee-x-dizmo-asante-ft-dreckzine/Slapdee%20X%20Dizmo%20Asante%20ft%20Dreckzine.mp3',
       artistBio: 'A powerful collaboration bringing together giants. Asante is a masterclass in Zambian hip-hop and lyricism.'

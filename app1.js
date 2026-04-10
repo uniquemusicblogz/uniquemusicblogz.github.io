@@ -108,17 +108,21 @@ const contentData = [
         zipDownloadLink: '#'
     }, */
     {
-        id: 103,
-        type: 'song',
-        title: 'King Blaze - Zambian Nights',
-        slug: 'king-blaze-zambian-nights',
-        artists: ['King Blaze'],
-        category: 'DOWNLOADS',
-        date: 'Dec 01, 2025',
-        excerpt: 'Experience the rhythm of the night with this energetic Zambian hit.',
-        imageUrl: 'https://picsum.photos/seed/zambia/600/300',
-        downloadLink: '#',
-        audioUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3',
+        {
+          id: 120, 
+          type: 'song',
+          title: 'Lubumba Jesu - Love Me (ft. Rudo Acapella)',
+          slug: 'lubumba-jesu-love-me-ft-rudo-acapella',
+          artists: ['Lubumba Jesu', 'Rudo Acapella'],
+          category: 'GOSPEL',
+          date: 'Jan 23, 2026',
+          excerpt: 'A breathtaking vocal performance. Lubumba Jesu and Rudo Acapella strip everything away to deliver a powerful, soulful message.',
+          // Using your logo as a placeholder until you finish the Photoshop artwork
+          imageUrl: 'https://archive.org/download/UNIQUEMUSICBLOGbbbb/UNIQUEMUSICBLOGbbbb.png', 
+          audioUrl: 'https://ia600108.us.archive.org/17/items/lubumba-jesu-love-me-ft.-rudo-acapella/Lubumba%20Jesu%20Love%20Me%20Ft.%20Rudo%20Acapella.mp3',
+          downloadLink: 'https://ia600108.us.archive.org/17/items/lubumba-jesu-love-me-ft.-rudo-acapella/Lubumba%20Jesu%20Love%20Me%20Ft.%20Rudo%20Acapella.mp3',
+          artistBio: 'Known for their harmonic precision and spiritual depth, these artists are redefining the Acapella scene in the region.'
+        }
         artistBio: 'King Blaze is a multi-award winning artist known for his high-energy performances and traditional Zambian fusion.'
     },
     {

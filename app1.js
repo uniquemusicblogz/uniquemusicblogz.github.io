@@ -107,7 +107,7 @@ const contentData = [
         ],
         zipDownloadLink: '#'
     }, */
-    {
+
         {
           id: 103, 
           type: 'song',
@@ -117,7 +117,7 @@ const contentData = [
           category: 'GOSPEL',
           date: 'Jan 23, 2026',
           excerpt: 'A breathtaking vocal performance. Lubumba Jesu and Rudo Acapella strip everything away to deliver a powerful, soulful message.',
-          imageUrl: 'https://archive.org/download/UNIQUEMUSICBLOGbbbb/UNIQUEMUSICBLOGbbbb.png', 
+          imageUrl: 'https://archive.org/download/lubomba/lubomba.png', 
           audioUrl: 'https://ia600108.us.archive.org/17/items/lubumba-jesu-love-me-ft.-rudo-acapella/Lubumba%20Jesu%20Love%20Me%20Ft.%20Rudo%20Acapella.mp3',
           downloadLink: 'https://ia600108.us.archive.org/17/items/lubumba-jesu-love-me-ft.-rudo-acapella/Lubumba%20Jesu%20Love%20Me%20Ft.%20Rudo%20Acapella.mp3',
           artistBio: 'Known for their harmonic precision and spiritual depth, these artists are redefining the Acapella scene in the region.'

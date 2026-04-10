@@ -109,7 +109,7 @@ const contentData = [
     }, */
     {
         {
-          id: 120, 
+          id: 103, 
           type: 'song',
           title: 'Lubumba Jesu - Love Me (ft. Rudo Acapella)',
           slug: 'lubumba-jesu-love-me-ft-rudo-acapella',
@@ -117,13 +117,10 @@ const contentData = [
           category: 'GOSPEL',
           date: 'Jan 23, 2026',
           excerpt: 'A breathtaking vocal performance. Lubumba Jesu and Rudo Acapella strip everything away to deliver a powerful, soulful message.',
-          // Using your logo as a placeholder until you finish the Photoshop artwork
           imageUrl: 'https://archive.org/download/UNIQUEMUSICBLOGbbbb/UNIQUEMUSICBLOGbbbb.png', 
           audioUrl: 'https://ia600108.us.archive.org/17/items/lubumba-jesu-love-me-ft.-rudo-acapella/Lubumba%20Jesu%20Love%20Me%20Ft.%20Rudo%20Acapella.mp3',
           downloadLink: 'https://ia600108.us.archive.org/17/items/lubumba-jesu-love-me-ft.-rudo-acapella/Lubumba%20Jesu%20Love%20Me%20Ft.%20Rudo%20Acapella.mp3',
           artistBio: 'Known for their harmonic precision and spiritual depth, these artists are redefining the Acapella scene in the region.'
-        }
-        artistBio: 'King Blaze is a multi-award winning artist known for his high-energy performances and traditional Zambian fusion.'
     },
     {
         id: 104,

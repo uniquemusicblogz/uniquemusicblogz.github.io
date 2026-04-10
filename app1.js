@@ -25,7 +25,7 @@ const contentData = [
         category: 'DOWNLOADS',
         date: 'Nov 15, 2025',
         excerpt: 'A soulful, melancholic track capturing the raw ache of heartbreak and the desperate wish to turn back time.',
-        imageUrl: 'https://archive.org/download/uniquemusicbloglogo/uniquemusicbloglogo.png', 
+        imageUrl: 'https://ia600600.us.archive.org/18/items/song-cover-jucy-yung/song%20cover%20jucy%20yung.png', 
         audioUrl: 'https://ia600907.us.archive.org/12/items/jucy-yung-someday/Jucy%20Yung%20-%20Someday.mp3',
         downloadLink: 'https://ia600907.us.archive.org/12/items/jucy-yung-someday/Jucy%20Yung%20-%20Someday.mp3', 
         artistBio: 'Released on September 8, 2023, "Someday" showcases Jucy young’s signature sentimental style. The track blends soulful, emotive vocals with a poignant narrative focused on the lingering pain of a breakup, the struggle of loneliness, and the deep-seated longing to return to a relationship’s happiest moments.'

@@ -754,8 +754,8 @@ backButton.addEventListener('click', () => history.back());
 
 mobileMenuButton.addEventListener('click', () => {
     const isHidden = mobileMenu.classList.toggle('hidden');
-    mobileMenuIcons[0].classList.toggle('hidden', isHidden);
-    mobileMenuIcons[1].classList.toggle('hidden', !isHidden);
+    mobileMenuIcons[0].classList.toggle('hidden', !isHidden);
+    mobileMenuIcons[1].classList.toggle('hidden', isHidden);
 });
 
 // Initial setup
